@@ -4,16 +4,21 @@
 
 using namespace std;
 
-int main() {
-	int n, ogl;
-	cout << "n = ";
+int n, c, ogl; 
+int main(){
+	cout << "n =";
 	cin >> n;
-	ogl = 0;
-
-	while (n != 0)
-	{
-		ogl = ogl * 10 + n % 10;
+	while (n != 0) {
+		c = n % 10;
 		n = n / 10;
+		ogl = ogl * 10 +c;
+		
 	}
-	cout << "Numarul este palindrom:";
+	if (ogl == n)
+
+		cout << "DA";
+	else
+		cout << "Nu";
+	return 0;
+
 }

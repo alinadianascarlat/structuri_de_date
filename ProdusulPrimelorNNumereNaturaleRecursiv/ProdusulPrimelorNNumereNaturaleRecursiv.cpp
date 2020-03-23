@@ -3,16 +3,16 @@
 #include<iostream>
 using namespace std;
 
-int Prod(int m) {
+int Produs (int m) {
 	if (m == 2)
-		return 1;
+		return 2;
 	else
-		return Prod(m - 1) * m;
+		return m * Produs(m - 1);
 }
 
 int main() {
 	int n;
 	cout << "n = ";
 	cin >> n;
-	cout << "Produsul primelor " << n << " nr naturale este: " << Prod(n) << endl;
+	cout << "Produsul primelor nr naturale este: " << Produs(n) << endl;
 }
