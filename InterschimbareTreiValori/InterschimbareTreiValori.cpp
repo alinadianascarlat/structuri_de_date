@@ -1,3 +1,4 @@
+
 //42.Scrieti un program care interschimba trei valori. 
 
 #include<iostream>
@@ -9,7 +10,7 @@ int main() {
 	d = a;
 	a = b;
 	b = c;
-	c = a;
+	c = d;
 	cout << a << b << c;
 	return 0;
 }
