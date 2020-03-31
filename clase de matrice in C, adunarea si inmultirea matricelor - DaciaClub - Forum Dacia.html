@@ -1,0 +1,1554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html -->
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2"> 
+<title>clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<meta name="keywords" content="dacia, duster, sandero, logan, supernova, solenza, berlina, 1300, 1310, 1100, 500, lastun, forum, comunitate, club, discutii">
+<link rel="icon" href="http://www.daciaclub.ro/style_images/daciaclub/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.daciaclub.ro/style_images/daciaclub/favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="DaciaClub" href="http://www.daciaclub.ro/ssi.php?a=out&amp;f=31,89&amp;show=25&amp;type=rss">
+<meta name="google-site-verification" content="npjrK4-p6-UXPFmzQuTtoCcXsd1kY861d5VHzQFYV10">
+ 
+<style type="text/css" media="all">
+  @import url(//www.daciaclub.ro/style_images/css_4.css);
+</style>
+<link rel="stylesheet" type="text/css" href="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/highslide.css">
+<style type="text/css">
+@import url(//www.google.com/cse/api/branding.css);
+</style>
+
+<script src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/osd.js.download"></script><script src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(8).txt"></script><script src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(9).txt" id="google_shimpl"></script><script async="" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/analytics.js.download"></script><script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/swfobject-2.2.min.js.download"></script>
+<link rel="preload" href="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(10).txt" as="script"><script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(10).txt"></script><link rel="preload" href="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(11).txt" as="script"><script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(11).txt"></script><style type="text/css">.highslide img {cursor: url(jscripts/highslide/graphics/zoomin.cur), pointer !important;}</style><link rel="stylesheet" type="text/css" href="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/dark-bottom.css"></head>
+<body><div class="cc_banner-wrapper "><div class="cc_banner cc_container cc_container--open"><a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#null" data-cc-event="click:dismiss" target="_blank" class="cc_btn cc_btn_accept_all">AM ÎNŢELES</a><p class="cc_message">Acest site folose&#537;te cookie-uri pentru a oferi servicii, pentru a personaliza anun&#539;uri &#537;i pentru a analiza traficul. Dacă folosi&#539;i acest site, sunte&#539;i de acord cu utilizarea cookie-urilor. </p><a class="cc_logo" target="_blank" href="http://silktide.com/cookieconsent">Cookie Consent plugin for the EU cookie law</a></div></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-265079-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="ipbwrapper">
+<!--ipb.javascript.start-->
+<script type="text/javascript">
+<!--
+ var ipb_var_st       = "";
+ var ipb_lang_tpl_q1  = "Please enter a page number to jump to between 1 and";
+ var ipb_var_s        = "cfa3b3418acdb090bb8d3a74f8bb0de9";
+ var ipb_var_phpext   = "php";
+ var ipb_var_base_url = "http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;";
+ var ipb_input_f      = "9";
+ var ipb_input_t      = "46567";
+ var ipb_input_p      = "";
+ var ipb_var_cookieid = "";
+ var ipb_var_cookie_domain = "";
+ var ipb_var_cookie_path   = "/";
+ 
+ //-->
+</script>
+<script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/ipb_global.js.download"></script>
+<script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/highslide.js.download"></script>
+
+<script type="text/javascript">
+   hs.allowSizeReduction = true;
+    // override Highslide settings here
+    // instead of editing the highslide.js file
+    hs.graphicsDir = 'jscripts/highslide/graphics/';
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hs.registerOverlay({
+  html: '<div class="closebutton" onclick="return hs.close(this)" title="Close"></div>',
+  position: 'top right',
+  fade: 2 // fading the semi-transparent overlay looks bad in IE
+});
+//]]>
+</script>
+<!--ipb.javascript.end-->
+<div class="borderwrap">
+  <div id="logostrip">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr>
+<td width="220px">
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/logo4.gif" style="vertical-align:top" alt="DaciaClub Logo" title="DaciaClub Logo" border="0" width="220" height="98"></a>
+</td>
+<td valign="top" align="right">
+<div class="adsense">
+<script async="" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(12).txt"></script>
+<!-- Dacia Sus -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5623495814070383" data-ad-slot="1350064747" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/saved_resource(1).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+  </td>
+</tr>
+</tbody></table>
+</div>
+  <div id="submenu">
+    <p class="home"><!--ipb.leftlinks.start--><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;">Prima Pagina</a>&nbsp;<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=boardrules">Regulament</a>
+<a href="http://www.daciaclub.ro/Dacia-SuperNova-f39.html">SuperNova</a>
+<a href="http://www.daciaclub.ro/Dacia-Solenza-f41.html">Solenza</a>
+<a href="http://www.daciaclub.ro/Dacia-Logan-f44.html">Logan</a>
+<a href="http://www.daciaclub.ro/Dacia-Sandero-f133.html">Sandero</a>
+<a href="http://www.daciaclub.ro/Dacia-Duster-f148.html">Duster</a>
+<a href="http://www.daciaclub.ro/Celelalte-modele-Dacia-1100-Berlina-Papuc-Nova-f43.html">Clasic</a>
+<a href="http://www.daciaclub.ro/English-Corner-f110.html">English Corner</a>
+
+<!--ipb.leftlinks.end--></p>
+    <!--ipb.rightlinks.start-->
+
+
+<script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/ipb_menu_items_dacia.js.download"></script><div id="dropmenudiv" style="visibility:hidden;width:100px;background-color:#EBEBEB" onmouseover="clearhidemenu()" onmouseout="dynamichide(event)"></div>
+
+<p><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Search&amp;f=9">Search</a>
+<a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu1, &#39;150px&#39;)" onmouseout="delayhidemenu()"><b>Forum</b> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/menu_action_down.gif" alt="V" title="Open Menu" border="0"></a>
+<a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="return clickreturnvalue()" onmouseover="dropdownmenu(this, event, menu2, &#39;200px&#39;)" onmouseout="delayhidemenu()"><b>Utile</b> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/menu_action_down.gif" alt="V" title="Open Menu" border="0"></a>
+</p>
+<!--ipb.rightlinks.end-->
+  </div>
+
+</div>
+<div id="userlinksguest">
+  <p class="pcen"><b>Welcome Guest</b> ( <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Login&amp;CODE=00">Log In</a> | <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Reg&amp;CODE=00">Register</a> )  </p>
+</div><div class="profitshare" style="min-height:94px">
+<center>
+<script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/SXub"></script><div id="profitshare-static-xp4zzrpqq" style="width: 728px;height: 90px;border: 0;padding: 0;margin: 0;display: inline;"><iframe src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/saved_resource(2).html" name="ps_frame" marginwidth="0" marginheight="0" frameborder="0" width="728" height="90" scrolling="no" style="background-color: rgb(255, 255, 255);"></iframe></div>
+</center>
+</div>
+<div class="navstrip"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/nav.gif" border="0" alt="&gt;">&nbsp;<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=idx">DaciaClub - Forum Dacia</a>&nbsp;&gt;&nbsp;<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showforum=40">Alte discutii</a>&nbsp;&gt;&nbsp;<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showforum=9">Cafenea</a></div>
+<!--IBF.NEWPMBOX-->
+<script type="text/javascript">
+<!--
+var ipb_lang_tt_prompt = "Manually copy the direct link to this post below to store the link in your computer's clipboard";
+var ipb_lang_js_del_1  = "Are you sure you want to delete this message?";
+var ipb_lang_js_del_2  = "Ok, no action has been taken";
+var addquotebutton     = "style_images/daciaclub/p_mq_add.gif";
+var removequotebutton  = "style_images/daciaclub/p_mq_remove.gif";
+var unselectedbutton = "style_images/daciaclub/topic_unselected.gif";
+var selectedbutton   = "style_images/daciaclub/topic_selected.gif";
+var lang_gobutton    = "With Selected";
+var lang_suredelete  = "Are you sure you wish to delete these posts?";
+-->
+</script>
+<script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/ipb_topic.js.download"></script>
+<a name="top"></a>   
+
+<table cellspacing="0">
+  <tbody><tr>
+    <td style="padding-left:0px" width="40%" valign="middle" nowrap="nowrap"><div>&nbsp;</div></td>
+    <td class="nopad" style="padding:0px 0px 5px 0px" align="right" width="60%" valign="middle"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/t_closed.gif" border="0" alt="Closed Topic"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=00&amp;f=9" title="Start a new topic"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/t_new.gif" border="0" alt="Start new topic"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=10&amp;f=9"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/t_poll.gif" border="0" alt="Start Poll"></a><!--{IBF.START_NEW_POLL}--></td>
+  </tr>
+</tbody></table>
+<div class="borderwrap">
+  <div class="maintitle">
+    <p class="expand">
+      <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showtopic=46567&amp;mode=threaded">Outline</a> &#183;
+      [ <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showtopic=46567&amp;mode=linear">Standard</a> ] &#183;
+      <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showtopic=46567&amp;mode=linearplus">Linear+</a>
+    </p>
+    <p><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/nav_m.gif" border="0" alt="&gt;" width="8" height="8">&nbsp;<b>clase de matrice in C</b>, adunarea si inmultirea matricelor</p>
+  </div>
+  <!--{IBF.POLL}-->
+  <div align="right" class="subtitle">
+    <div><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=usercp&amp;CODE=start_subs&amp;method=topic&amp;tid=46567">Track this topic</a> | <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Forward&amp;f=9&amp;t=46567">Email this topic</a> | <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Print&amp;client=printer&amp;f=9&amp;t=46567">Print this topic</a> | <a href="http://www.daciaclub.ro/rss/index.php?tid=46567" target="_blank">Topic RSS feed</a>
+    </div>
+  </div><!--Begin Msg Number 590639-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry590639"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=3901">free_fiber</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 24 May 2006, 22:19</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(590639); return false;">#1</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-3901.jpg" border="0" width="140" height="105" alt=""><br><br>
+            Membru autentic<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 1.555<br>
+            Joined: 25 October 04<br>
+            From: Bucuresti<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 590639 -->
+      <div class="postcolor">
+  				<table width="100%"><tbody><tr><td width="300px" height="250" valign="top" class="adsense"><script async="" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(12).txt"></script>
+<!-- DaciaClub In primul post -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5623495814070383" data-ad-slot="9861113596" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:300px;height:250px;" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/saved_resource(3).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></td><td valign="top"><div class="postcolor">salutare. <br><br>am si eu nevoie urgent de niste sfaturi de la un mic programel. am de implementat o clasa de matrice in care sa definesc un vector de 2 dimensiuni si nr de linii si nr de coloane.<br>cu aceste matrice trebuie sa fac operatiile de adunare si inmultire. (adica in main sa am ceva de genu m1+m2).<br><br>multumesc.</div></td></tr></tbody></table> <!--IBF.ATTACHMENT_590639--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Dacia
+Logan Laureate 1.5dci 85CP
+2008
+ - B xx XXX</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!--<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Mail&amp;CODE=00&amp;MID=3901"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_email.gif" border='0'  alt='Email Poster' /></a>--></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(590639); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_590639" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=590639" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><table cellspacing="1">
+	<tbody><tr>
+		<td valign="middle" class="row2" width="1%">	
+<!-- Adsense -->
+</td>
+</tr>
+	<tr>
+<td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 590661-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry590661"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=3382">hash</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 24 May 2006, 22:36</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(590661); return false;">#2</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-3382.jpg" border="0" width="129" height="140" alt=""><br><br>
+            calculatorist<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 1.388<br>
+            Joined: 13 September 04<br>
+            <br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 590661 -->
+      <div class="postcolor">Sesiunea, ai ? <!--emo&:P--><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/tongue.gif" border="0" style="vertical-align:middle" alt="tongue.gif"><!--endemo--> <!--IBF.ATTACHMENT_590661--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+-
+-
+-</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=3382"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=3382"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(590661); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_590661" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=590661" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 590735-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry590735"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=12139">ionutm82</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 01:22</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(590735); return false;">#3</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-12139.jpg" border="0" width="140" height="106" alt=""><br><br>
+            Membru<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 187<br>
+            Joined: 19 February 06<br>
+            From: Bucuresti<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 590735 -->
+      <div class="postcolor"><!--QuoteBegin-free_fiber+24 May 2006, 23:19--><div class="quotetop">QUOTE(free_fiber @ 24 May 2006, 23:19)</div><div class="quotemain"><!--QuoteEBegin-->salutare. <br><br>am si eu nevoie urgent de niste sfaturi de la un mic programel. am de implementat o clasa de matrice in care sa definesc un vector de 2 dimensiuni si nr de linii si nr de coloane.<br>cu aceste matrice trebuie sa fac operatiile de adunare si inmultire. (adica in main sa am ceva de genu m1+m2).<br><br>multumesc.<br><div align="right"><a href="http://www.daciaclub.ro/index.php?act=findpost&amp;pid=590639"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/post_snapback.gif" alt="*" border="0"></a></div><br><!--QuoteEnd--></div><!--QuoteEEnd--><br><br>Uite un mic cod ca sa-ti faci o idee. Pe scurt ideea este urmatoarea:<br>- definesti o clasa Matrice care va avea ca membri un tablou (mat) si cele doua dimensiuni (lin, col);<br>- initializarea presupune sa asociezi obiectului de tip Matrice cele doua dimensiuni si o matrice propiu-zisa (din comoditate eu am initializat decat elementul (1,1)  <!--emo&:P--><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/tongue.gif" border="0" style="vertical-align:middle" alt="tongue.gif"><!--endemo-->  ), alocare memorie etc. Chestia asta poti sa o faci la fel de bine si in constructor, eu am facut-o in fct init;<br>- pentru a defini operatiile '+' si '*' trebuie sa supraincarci operatorii + si * a.i sa faca suma si inmultirea asa cum sunt definite operatiile astea pentru matrice. Vezi exemplul pentru '+' pe care ti l-am dat. Ma rog mai trebuie sa verifici daca corespund dimensiunile matricilor ... banuiesc ca sti si tu cum se face suma sau inmultirea matricelor...<br><br>Sper ca ti-ai facut o idee.<br><br><!--c1--><div class="codetop">CODE</div><div class="codemain"><!--ec1-->#include &lt;iostream&gt;<br>using namespace std;<br><br>class Matrice{<br>public:<br>	int **mat;<br>	int lin, col;<br><br>	void init(int,int);<br>	void print();<br>	Matrice operator+(Matrice);<br>};<br><br>void Matrice::init(int l, int c){<br>	lin = l;<br>	col = c;<br><br>	mat = new int*[l];<br>	for(int i=0; i&lt;l; i++)<br> &nbsp;mat[i] = new int[c];<br><br>	mat[1][1] = 10;<br>}<br><br>Matrice Matrice::operator+(Matrice m){<br>	Matrice rez;<br>	rez.init(lin,col);<br>	for(int i=0; i&lt;lin; i++)<br> &nbsp;for(int j=0; j&lt;col; j++)<br> &nbsp;	rez.mat[i][j] = mat[i][j] + m.mat[i][j];<br><br>	return rez;<br>}<br><br>void Matrice::print(){<br>	for(int i=0; i&lt;lin; i++){<br> &nbsp;for(int j=0; j&lt;col; j++)<br> &nbsp;	cout&lt;&lt;mat[i][j]&lt;&lt;" ";<br> &nbsp;cout&lt;&lt;endl;<br>	}<br>}<br><br>void main(){<br>	<br>	cout&lt;&lt;"matrice"&lt;&lt;endl;<br>	Matrice m1, m2, m3;<br>	m1.init(3,3);<br>	m2.init(3,3);<br><br>	m3 = m1 + m2;<br>	m3.print();<br>	cin.get();<br>}<br><!--c2--></div><!--ec2--><br><br><span class="edit">This post has been edited by <b>ionutm82</b>: 25 May 2006, 01:24</span> <!--IBF.ATTACHMENT_590735--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Renault
+Megane 3 1.6 16V
+Dynamique 2009
+ - B-yy-XXX</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=12139"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=12139"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(590735); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_590735" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=590735" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591005-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591005"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=5094">thegodsglory</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 11:46</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591005); return false;">#4</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-5094.jpg" border="0" width="140" height="116" alt=""><br><br>
+            Membru incepator<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 87<br>
+            Joined: 31 December 04<br>
+            From: B<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 591005 -->
+      <div class="postcolor">brrrrrrrrr!!<br>on/off/print... si gata <!--IBF.ATTACHMENT_591005--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+dacia 
+1310 alb-ruginiu :)
+ - b14</div>                <div class="semnatura">it's a feature, not a bug.</div>
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=5094"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=5094"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591005); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591005" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591005" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591022-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591022"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=10630">Smeagol</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 11:54</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591022); return false;">#5</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-10630.jpg" border="0" width="131" height="140" alt=""><br><br>
+            Membru ...<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 238<br>
+            Joined: 18 November 05<br>
+            From: Timisoara<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 591022 -->
+      <div class="postcolor">Idee de imbunatatire:<br><br>Adauga un setter/getter pentru elemente, ca sa faci indexarea.<br>Foloseste un singur vector si aloca acolo toate elementele. Indexarea o vei face in setter/getter. Merge mai simplu contructorul si destructorul si vei avea mai putin overhead in memorie - alocatorul de C++ este facut pentru obiecte medii, de 64 de octeti, asa ca vei fragmenta mult memoria cu un pointer dublu. <!--IBF.ATTACHMENT_591022--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Dacia
+Logan Ambition
+2006, 1.6 MPI
+ - TM 10 ???</div>                <div class="semnatura">"Ai grija ce-ti doresti. S-ar putea sa capeti."</div>
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=10630"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=10630"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591022); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591022" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591022" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591192-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591192"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=3901">free_fiber</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 14:36</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591192); return false;">#6</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-3901.jpg" border="0" width="140" height="105" alt=""><br><br>
+            Membru autentic<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 1.555<br>
+            Joined: 25 October 04<br>
+            From: Bucuresti<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 591192 -->
+      <div class="postcolor">Uite ce am modificat. Am incercat sa citesc de la tastatura elem. matricelor dar se blocheaza. Imi da eroarea aia cu don't send.<br><br><!--c1--><div class="codetop">CODE</div><div class="codemain"><!--ec1-->#include &lt;iostream&gt;<br>using namespace std;<br><br>class Matrice{<br>public:<br>int **mat;<br>int lin, col;<br><br>void init(int,int);<br>void print();<br>Matrice operator+(Matrice);<br>};<br><br>void Matrice::init(int l, int c){<br>lin = l;<br>col = c;<br><br>mat = new int*[l];<br>for(int i=0; i&lt;l; i++)<br>mat[i] = new int[c];<br><br>for (int a=1;a&lt;=l;a++){<br> &nbsp; &nbsp; for (int b=1;b&lt;=c;b++){<br>	cout&lt;&lt;"Dati un element "&lt;&lt;" ";<br>	cout&lt;&lt;a&lt;&lt;" ";<br>	cout&lt;&lt;b&lt;&lt;" ";<br>	cin&gt;&gt;mat[a][b];<br> &nbsp; &nbsp; }<br> &nbsp; }<br>}<br><br>Matrice Matrice::operator+(Matrice m){<br>Matrice rez;<br>rez.init(lin,col);<br>for(int i=1; i&lt;lin; i++)<br> for(int j=1; j&lt;col; j++)<br> &nbsp;rez.mat[i][j] = mat[i][j] + m.mat[i][j];<br><br>return rez;<br>}<br><br>void Matrice::print(){<br>for(int i=1; i&lt;lin; i++){<br> for(int j=1; j&lt;col; j++)<br> &nbsp;cout&lt;&lt;mat[i][j]&lt;&lt;" ";<br> cout&lt;&lt;endl;<br>}<br>}<br><br>void main(){<br><br>cout&lt;&lt;"matrice"&lt;&lt;endl;<br>Matrice m1, m2, m3;<br>m1.init(2,2);<br>m2.init(2,2);<br><br>m3 = m1 + m2;<br>m3.print();<br>cin.get();<br>}<br><!--c2--></div><!--ec2--><br><br>Inca ceva:<br>Ce face chestia asta (aceeasi eroare imi dadea si daca stergeam partea asta a scriptului):<br><!--c1--><div class="codetop">CODE</div><div class="codemain"><!--ec1--><br>mat = new int*[l];<br>for(int i=0; i&lt;l; i++)<br>mat[i] = new int[c];<br><!--c2--></div><!--ec2--><br><br><span class="edit">This post has been edited by <b>free_fiber</b>: 25 May 2006, 14:40</span> <!--IBF.ATTACHMENT_591192--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Dacia
+Logan Laureate 1.5dci 85CP
+2008
+ - B xx XXX</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!--<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Mail&amp;CODE=00&amp;MID=3901"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_email.gif" border='0'  alt='Email Poster' /></a>--></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591192); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591192" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591192" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591195-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591195"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=10630">Smeagol</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 14:39</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591195); return false;">#7</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-10630.jpg" border="0" width="131" height="140" alt=""><br><br>
+            Membru ...<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 238<br>
+            Joined: 18 November 05<br>
+            From: Timisoara<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 591195 -->
+      <div class="postcolor">pune o conversie explicita la citire din cin:<br>cin&gt;&gt;(int)(mat[i][j]);<br><br>La a doua intrebare:<br>Prima linie aloca un vector de pointeri catre int. Apoi se aloca pentru fiecare pointer un vector de int.<br><br><span class="edit">This post has been edited by <b>Smeagol</b>: 25 May 2006, 14:41</span> <!--IBF.ATTACHMENT_591195--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Dacia
+Logan Ambition
+2006, 1.6 MPI
+ - TM 10 ???</div>                <div class="semnatura">"Ai grija ce-ti doresti. S-ar putea sa capeti."</div>
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=10630"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=10630"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591195); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591195" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591195" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591206-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591206"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=6785">stuiberv</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 14:49</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591206); return false;">#8</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <br><br>
+            Membru autentic<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 246<br>
+            Joined: 8 April 05<br>
+            From: Iasi<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 591206 -->
+      <div class="postcolor">Sa ma bag si eu in vorba: am vazut ca titlul este ¨matrice in C¨.<br>Daca ma duceam la examen in anul I cu ce e mai sus nu il luam ca spuneau ca e cod C++.<br>Asta ca sa nu fie surprize neplacute la examen. <!--IBF.ATTACHMENT_591206--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Papuci
+marimea 43
+3 ani bocanci
+ - is xx undoitrei</div>                <div class="semnatura">&#8220;All parts should go together without forcing. You must remember that the parts you<br>are reassembling were disassembled by you. Therefore, if you can&#8217;t get them<br>together again, there must be a reason. By all means, do not use a hammer.&#8221; &#8212; IBM<br>maintenance manual, 1925</div>
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=6785"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=6785"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!--<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Mail&amp;CODE=00&amp;MID=6785"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_email.gif" border='0'  alt='Email Poster' /></a>--></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591206); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591206" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591206" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591226-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591226"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=3901">free_fiber</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 15:11</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591226); return false;">#9</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-3901.jpg" border="0" width="140" height="105" alt=""><br><br>
+            Membru autentic<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 1.555<br>
+            Joined: 25 October 04<br>
+            From: Bucuresti<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 591226 -->
+      <div class="postcolor">Scriptu final este:<br><!--c1--><div class="codetop">CODE</div><div class="codemain"><!--ec1--><br>#include &lt;iostream&gt;<br><br>using namespace std;<br><br>class Matrice{<br>public:<br>	int mat[50][50];<br>int lin, col;<br><br>void init(int,int);<br>void print();<br>Matrice operator+(Matrice);<br>};<br><br>void Matrice::init(int l, int c){<br>lin = l;<br>col = c;<br><br><br><br>for (int a=1;a&lt;=l;a++){<br> &nbsp; &nbsp; for (int b=1;b&lt;=c;b++){<br>	cout&lt;&lt;"Dati elementul mat[";<br>	cout&lt;&lt;a;<br>	cout&lt;&lt;"][";<br>	cout&lt;&lt;b;<br>	cout&lt;&lt;"]: ";<br>	cin&gt;&gt;(int)(mat[a][b]);<br> &nbsp; &nbsp; }<br> &nbsp; }<br>}<br><br>Matrice Matrice::operator+(Matrice m){<br>Matrice rez;<br>rez.init(lin,col);<br>for(int i=1; i&lt;lin; i++)<br> for(int j=1; j&lt;col; j++)<br> &nbsp;rez.mat[i][j] = mat[i][j] + m.mat[i][j];<br><br>return rez;<br>}<br><br>void Matrice::print(){<br>for(int i=1; i&lt;lin; i++){<br> for(int j=1; j&lt;col; j++)<br> &nbsp;cout&lt;&lt;mat[i][j]&lt;&lt;" ";<br> cout&lt;&lt;endl;<br>}<br>}<br><br>void main(){<br><br>cout&lt;&lt;"matrice"&lt;&lt;endl;<br>Matrice m1, m2, m3;<br>m1.init(2,2);<br>m2.init(2,2);<br><br>m3 = m1 + m2;<br>m3.print();<br><br>cin.get();<br>}<br><!--c2--></div><!--ec2--><br><br>Este creat in Visual C++, am renuntat la alocarea dinamica.<br>Problema este ca imi cere elementele a 3 matrici, in loc de 2; si nu aduna decat m1[1][1]+m2[1][1]. De ce?<br>Verificati-l si voi va rog. <!--IBF.ATTACHMENT_591226--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Dacia
+Logan Laureate 1.5dci 85CP
+2008
+ - B xx XXX</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!--<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Mail&amp;CODE=00&amp;MID=3901"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_email.gif" border='0'  alt='Email Poster' /></a>--></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591226); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591226" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591226" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591230-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591230"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=10630">Smeagol</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 15:15</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591230); return false;">#10</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-10630.jpg" border="0" width="131" height="140" alt=""><br><br>
+            Membru ...<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 238<br>
+            Joined: 18 November 05<br>
+            From: Timisoara<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 591230 -->
+      <div class="postcolor">Umilele mele cunostiinte imi spun ca in C si C++ sunt vectori cu baza in 0.<br>Ceea ce faci tu acolo este sa scrii in fericire prin memorie, numa' unde trebe' nu.<br>In axemplul dat, citesti aprox corect (ciclul de la 1 pana la limita inclusiv) dar operezi aiurea (ciclul de la 1 pana la limita exclusiv). Este corect cum se comporta, nu e bine scris.<br><br>Corecteaza cu remarca de mai sus.<br><br><span class="edit">This post has been edited by <b>Smeagol</b>: 25 May 2006, 15:17</span> <!--IBF.ATTACHMENT_591230--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Dacia
+Logan Ambition
+2006, 1.6 MPI
+ - TM 10 ???</div>                <div class="semnatura">"Ai grija ce-ti doresti. S-ar putea sa capeti."</div>
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=10630"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=10630"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591230); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591230" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591230" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591231-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591231"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=12139">ionutm82</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 15:15</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591231); return false;">#11</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-12139.jpg" border="0" width="140" height="106" alt=""><br><br>
+            Membru<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 187<br>
+            Joined: 19 February 06<br>
+            From: Bucuresti<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 591231 -->
+      <div class="postcolor"><!--QuoteBegin-free_fiber+25 May 2006, 15:36--><div class="quotetop">QUOTE(free_fiber @ 25 May 2006, 15:36)</div><div class="quotemain"><!--QuoteEBegin-->Uite ce am modificat. Am incercat sa citesc de la tastatura elem. matricelor dar se [B]blocheaza. Imi da eroarea aia cu don't send.<br><br><!--c1--><div class="codetop">CODE</div><div class="codemain"><!--ec1--><br>...<br><br>void Matrice::init(int l, int c){<br>lin = l;<br>col = c;<br><br>mat = new int*[l];<br>for(int i=0; i&lt;l; i++)<br>mat[i] = new int[c];<br><br>for (int a=1;a&lt;=l;a++){<br> &nbsp; &nbsp; for (int b=1;b&lt;=c;b++){<br>	cout&lt;&lt;"Dati un element "&lt;&lt;" ";<br>	cout&lt;&lt;a&lt;&lt;" ";<br>	cout&lt;&lt;b&lt;&lt;" ";<br>	cin&gt;&gt;mat[a][b];<br> &nbsp; &nbsp; }<br> &nbsp; }<br>}<br><br>....<br><!--c2--></div><!--ec2--><br><br>Inca ceva:<br>Ce face chestia asta (aceeasi eroare imi dadea si daca stergeam partea asta a scriptului):<br><!--c1--><div class="codetop">CODE</div><div class="codemain"><!--ec1--><br>mat = new int*[l];<br>for(int i=0; i&lt;l; i++)<br>mat[i] = new int[c];<br><!--c2--></div><!--ec2--><br><div align="right"><a href="http://www.daciaclub.ro/index.php?act=findpost&amp;pid=591192"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/post_snapback.gif" alt="*" border="0"></a></div><br><!--QuoteEnd--></div><!--QuoteEEnd--><br><br><br>elementele matricei sunt de la 0..l-1, 0..c-1, deci for-ul este : for(int a=0; a&lt;l; a++).<br>Primele randuri reprezinta alocarea dinamica de memorie pt matrice (poti sa privesti matricea ca pe un vector de vectori).  Daca stergi aceste linii o sa dea eroare pentru ca accesezi o zona de memorie nealocata, acelasi lucru care se intampla si atunci cand faceai for-ul de la 1..lin. Daca iti e greu cu alocarea dinamica poti sa faci si alocare statica adica la declararea variablilei mat in loc de **mat pui mat[100][100] insa e ineficient dar pt incepatori merge  <!--emo&:)--><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/smile.gif" border="0" style="vertical-align:middle" alt="smile.gif"><!--endemo-->  .<br><br>bafta!<br><br><br>PS:   In C nu existau clase, am trecut peste acest aspect.<br>PS2 : Nu e nevoie de cast explicit la cin. operatorul '&gt;&gt;' este supraincarcat si pentru int printre altele.<br><br><span class="edit">This post has been edited by <b>ionutm82</b>: 25 May 2006, 15:21</span> <!--IBF.ATTACHMENT_591231--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Renault
+Megane 3 1.6 16V
+Dynamique 2009
+ - B-yy-XXX</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=12139"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=12139"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591231); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591231" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591231" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591255-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591255"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=16455">jinxy</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/icon1.gif" alt=""> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 15:33</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591255); return false;">#12</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <br><br>
+            <br>
+            <br><br>
+            Group: Members<br>
+            Posts: 0<br>
+            Joined: 25 May 06<br>
+            <br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 591255 -->
+      <div class="postcolor">Problema e k ati uitat sa overloadati =. Normal k nu poate returna ce trebuie. egalul functioneaza pt numere nu pt obiecte(cum e cazul de fata) Alocarea este buna. <!--IBF.ATTACHMENT_591255--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+tricicleta
+cu 3 roti</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=16455"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=16455"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591255); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591255" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591255" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591286-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591286"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=3382">hash</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 16:05</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591286); return false;">#13</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-3382.jpg" border="0" width="129" height="140" alt=""><br><br>
+            calculatorist<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 1.388<br>
+            Joined: 13 September 04<br>
+            <br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 591286 -->
+      <div class="postcolor">@free_fiber : cu adunarea nu-mi dau seama, insa procedura de adunare face init la matricea rezultat, si in init se citesc elementele unei matrici.<br> <!--IBF.ATTACHMENT_591286--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+-
+-
+-</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=3382"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=3382"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591286); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591286" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591286" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591310-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591310"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=12139">ionutm82</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 16:25</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591310); return false;">#14</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-12139.jpg" border="0" width="140" height="106" alt=""><br><br>
+            Membru<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 187<br>
+            Joined: 19 February 06<br>
+            From: Bucuresti<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 591310 -->
+      <div class="postcolor">@hash. Corect! Normal ar fi ca citirea sa o faca separat (intr-o alta functie) si apeleaza apoi m.citire() de exemplu.<br><br>@jinxy. Atribuirea se poate realiza si la structuri, pointeri nu numai la numere. Merge si la obiecte insa nu avem control asupra atribuirii si prin urmare pot aparea surprize. In cazul nostru (m3=m1+m2) merge si fara supraincarcarea operatorului '='. Daca spre exemplu am face m1=m2 ar putea apara urmatoarele probleme:<br>1. campul (vechi) mat se pierde (oricum nu ne mai trebuie, dar va ramane memoria folosita degeaba!)<br>2. atat campul mat din m1 cat si cel din m2 vor pointa catre aceeasi zona de memorie (mat din m2). Daca facem modificari la m2.mat modificarile vor fi si in m1.mat. Daca stergem obiectul m2 (destructor) atunci m1.mat va pointa catre o zona dealocata. <!--IBF.ATTACHMENT_591310--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Renault
+Megane 3 1.6 16V
+Dynamique 2009
+ - B-yy-XXX</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=12139"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=12139"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591310); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591310" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591310" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591344-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591344"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=16455">jinxy</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 17:13</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591344); return false;">#15</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <br><br>
+            <br>
+            <br><br>
+            Group: Members<br>
+            Posts: 0<br>
+            Joined: 25 May 06<br>
+            <br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 591344 -->
+      <div class="postcolor">Merci ionutm82, m-ai lamurit si pt alte programe de ce nu e necesar mereu overloadarea = <!--IBF.ATTACHMENT_591344--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+tricicleta
+cu 3 roti</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=16455"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=16455"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591344); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591344" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591344" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591443-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591443"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=16455">jinxy</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 25 May 2006, 20:22</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591443); return false;">#16</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post1">
+          <span class="postdetails post-avatar">
+            <br><br>
+            <br>
+            <br><br>
+            Group: Members<br>
+            Posts: 0<br>
+            Joined: 25 May 06<br>
+            <br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post1">
+      <!-- THE POST 591443 -->
+      <div class="postcolor">#include &lt;iostream&gt;<br>#include &lt;cstdlib&gt;<br>using namespace std;<br><br>class matrix<br>{<br>  private:<br> int** element;<br><br>    void alloc(void);<br>    void release(void);<br>  <br>  public:<br> int rows;<br> int cols;<br> matrix(int, int);<br> matrix(const matrix&amp;);<br> ~matrix();<br> void print(void);<br> matrix operator+(const matrix&amp;);<br> matrix&amp; operator=(const matrix&amp;);<br> initializare(int, int);<br>};<br><br><br><br>matrix::matrix(int r, int c)<br>{<br>  rows = r;<br>  cols = c;<br>  alloc();<br>  for (int i = 0; i &lt; rows; i++)<br>    for (int j = 0; j &lt; cols; j++) <br>		element[i][j] = 0;<br><br>}<br><br>matrix::initializare(int r, int c)<br>{<br>	int f;<br>  rows = r;<br>  cols = c;<br>  alloc();<br>  for (int i = 0; i &lt; rows; i++)<br>    for (int j = 0; j &lt; cols; j++) <br>	{cout&lt;&lt;"elementul "&lt;&lt;i+1&lt;&lt;" " &lt;&lt;j+1&lt;&lt;" :";<br>	cin&gt;&gt;f;<br>		element[i][j] = f;<br>}<br>}<br><br><br>matrix::matrix(const matrix&amp; m)<br>{<br>  rows = m.rows;<br>  cols = m.cols;<br>  alloc();<br>  for (int i = 0; i &lt; rows; i++)<br>    for (int j = 0; j &lt; cols; j++) element[i][j] = m.element[i][j];<br>}<br><br>matrix::~matrix(void)<br>{<br>  release();<br>}<br><br>void matrix::alloc(void)       <br>{<br>  element = new int*[rows];<br>  for (int i = 0; i &lt; rows; i++)<br> element[i] = new int[cols];<br>}<br><br>void matrix::release(void)<br>{<br>  for (int i = 0; i &lt; rows; i++) delete [] element[i];<br>  delete [] element;<br>}<br><br>void matrix::print(void)<br>{<br>  for (int i = 0; i &lt; rows; i++)<br>  {<br> for (int j = 0; j &lt; cols; j++)  cout &lt;&lt; element[i][j] &lt;&lt; '\t';<br> cout &lt;&lt; endl;<br>  }<br>  return;<br>}<br><br>matrix matrix::operator+(const matrix&amp; m)<br>{<br>  if (rows != m.rows || cols != m.cols)<br>  {<br> cout &lt;&lt; "Adunarea nu se poate efectua\n";<br> return (*this);<br>  }<br>  matrix temp(rows,cols);<br><br>  for (int i = 0; i &lt; rows; i++)<br>    for (int j = 0; j &lt; cols; j++)<br>      temp.element[i][j] = element[i][j] + m.element[i][j];<br>  return temp;<br>}<br><br>matrix&amp; matrix::operator=(const matrix&amp; m)<br>{<br>  for (int i = 0; i &lt; m.rows; i++)<br>    for (int j = 0; j &lt; m.cols; j++)<br>      element[i][j] = m.element[i][j];<br>  return (*this);<br>}<br><br>int main(void)<br>{<br>	int rows;<br>	int cols;<br><br>	cout&lt;&lt;"Cate linii au matricele?";<br>	cin&gt;&gt;rows;<br>	cout&lt;&lt;"Cate coloane au matricele?";<br>	cin&gt;&gt;cols;<br><br>  <br>	<br>	<br>	matrix a(rows,cols),b(rows,cols),c(rows,cols);<br>	a.initializare(rows,cols);<br>	b.initializare(rows,cols);<br>  a.print();<br>  cout&lt;&lt;"\n";<br>  b.print();<br>  cout&lt;&lt;"\n";<br>  c = a + b;<br>  c.print();<br><br>  return 0;<br>}<br><br><br><br>Gata, asta e marele program! <!--emo&:blink:--><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/blink.gif" border="0" style="vertical-align:middle" alt="blink.gif"><!--endemo--> <!--IBF.ATTACHMENT_591443--></div>
+</td>
+</tr>
+<tr>
+<td class="post1" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+tricicleta
+cu 3 roti</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=16455"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=16455"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!----></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591443); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591443" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591443" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!--Begin Msg Number 591835-->
+<table cellspacing="1">
+  <tbody><tr>
+    <td valign="middle" class="row2" width="1%"><a name="entry591835"></a><span class="normalname"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showuser=3901">free_fiber</a></span></td>
+    <td class="row2" valign="top" width="99%">
+      <!-- POSTED DATE DIV -->
+      <div style="float: left;">
+        <span class="postdetails"> <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/to_post_off.gif" alt="post" border="0" style="padding-bottom:2px"> 26 May 2006, 11:18</span>
+      </div>
+      <!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+      <div align="right">
+        <span class="postdetails"> Post
+          <a title="Show the link to this post" href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="link_to_post(591835); return false;">#17</a>        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="1%" rowspan="2" valign="top" class="post2">
+          <span class="postdetails post-avatar">
+            <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/av-3901.jpg" border="0" width="140" height="105" alt=""><br><br>
+            Membru autentic<br>
+            <br><br>
+            Group: Members<br>
+            Posts: 1.555<br>
+            Joined: 25 October 04<br>
+            From: Bucuresti<br><br>
+            <br>
+        
+           <span class="warn-area">
+             
+           </span>
+          </span><br>
+          <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/spacer.gif" alt="" width="160" height="1" class="post-spacer"><br> 
+       </td>
+       <td width="100%" style="padding-left:10px;border-left:1px solid #fff" valign="top" class="post2">
+      <!-- THE POST 591835 -->
+      <div class="postcolor">Multumesc mult colegilor de forum <!--emo&:)--><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/smile.gif" border="0" style="vertical-align:middle" alt="smile.gif"><!--endemo--><br>Totul e OK acum.<br>Se poate inchide topicul. <!--IBF.ATTACHMENT_591835--></div>
+</td>
+</tr>
+<tr>
+<td class="post2" style="vertical-align:bottom;border-left:1px solid #fff">
+<br><br>--------------------<br><div class="semnatura">
+Dacia
+Logan Laureate 1.5dci 85CP
+2008
+ - B xx XXX</div>                
+      <!-- THE POST -->
+    </td>
+  </tr>
+  <tr>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <div style="text-align:left"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_offline.gif" border="0" alt="User is offline"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;galerie=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/galerie.gif" border="0" alt="Galerie Foto"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Msg&amp;CODE=04&amp;MID=3901"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_pm.gif" border="0" alt="PM"></a><!--<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Mail&amp;CODE=00&amp;MID=3901"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_email.gif" border='0'  alt='Email Poster' /></a>--></div>
+    </td>
+    <td class="formbuttonrow" nowrap="nowrap">
+      <!-- PM / EMAIL / WWW / MSGR -->
+      <div style="float: left;">
+        <a href="javascript:scroll(0,0);"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_up.gif" border="0" alt="Go to the top of the page"></a>
+      </div>
+      <!-- REPORT / UP -->
+           <div align="right">
+             <a href="http://www.daciaclub.ro/clase-de-matrice-in-C-t46567.html#" onclick="multiquote_add(591835); return false;" title="Toggle multiquote addition"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/p_mq_add.gif" name="mad_591835" alt="+"></a>
+<!-- buton dezactivat
+<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=02&amp;f=9&amp;t=46567&amp;qpid=591835" title="Reply directly to this post"><img src="http://www.daciaclub.ro/style_images/daciaclub/p_quote.gif" border='0'  alt='Quote Post' /></a> -->
+           </div>
+         </td>
+  </tr><tr>
+  <td class="catend" colspan="2"><!-- no content --></td>
+</tr>
+</tbody></table><!-- END TABLE --><!-- TABLE FOOTER -->
+<div class="barc">
+  <div style="float: right; padding: 5px 5px 0 0;"><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showtopic=46567&amp;view=old" style="text-decoration:none">&#171; Next Oldest</a>
+  &#183; <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showforum=9" style="font-weight: bold;text-decoration:none">Cafenea</a>
+  &#183; <a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showtopic=46567&amp;view=new" style="text-decoration:none">Next Newest &#187;</a></div>
+  <div>
+    <form action="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;" method="post" name="search">
+      <input type="hidden" name="forums" value="9">
+      <input type="hidden" name="topic" value="46567">
+      <input type="hidden" name="act" value="Search">
+      <input type="hidden" name="CODE" value="searchtopic">
+      <input type="text" size="25" name="keywords" class="searchinput" value="Enter Keywords" onfocus="this.value = &#39;&#39;;">&nbsp;
+      <input type="submit" value="Search Topic" class="button">
+    </form>
+&nbsp;<a href="http://www.google.ro/custom?domains=www.daciaclub.ro&amp;q=clase%20de%20matrice%20in%20C&amp;sa=Search&amp;sitesearch=www.daciaclub.ro&amp;client=pub-5623495814070383&amp;forid=1&amp;ie=ISO-8859-2&amp;oe=ISO-8859-2&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BFORID%3A1%3B&amp;hl=en" style="text-decoration:none;"><b>Arata topicuri asemanatoare</b></a>
+  </div>
+</div>
+</div>
+<br>
+<div class="adsense">
+<script async="" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/f(12).txt"></script>
+<!-- Dacia Jos -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5623495814070383" data-ad-slot="6436336117" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:728px;height:90px;" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/saved_resource(4).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><table cellspacing="0">
+  <tbody><tr>
+    <td style="padding-left:0px" width="30%" nowrap="nowrap" valign="middle"><div></div></td>
+    <td class="nopad" style="padding:5px 0px 5px 0px" align="right" width="70%"><!--IBF.QUICK_REPLY_CLOSED--><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/t_closed.gif" border="0" alt="Closed Topic"><a href="javascript:ShowHide(&#39;topic_open&#39;,&#39;topic_closed&#39;)" title="Open Topic Options"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/t_options.gif" border="0" alt="Topic Options"></a><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=00&amp;f=9" title="Start a new topic"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/t_new.gif" border="0" alt="Start new topic"></a><!--<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Post&amp;CODE=10&amp;f=9"><img src="http://www.daciaclub.ro/style_images/daciaclub/t_poll.gif" border='0'  alt='Start Poll' /></a>--></td>
+  </tr>
+</tbody></table>
+<!--IBF.QUICK_REPLY_OPEN-->
+<!-- Last upload , Google search, Random picture -->
+<div class="borderwrap gallery-block">
+<div class="maintitle"><center>DaciaClub</center></div>
+<table cellspacing="1">
+<tbody><tr> 
+<th align="center" width="25%">Random Picture</th>
+<th align="center" width="50%">Google search</th>
+<th align="center" width="25%">Last addition</th>
+</tr>
+<tr>
+<td align="center" class="row1"><a href="http://www.daciaclub.ro/galerie/displayimage.php?pos=-3062" target="_blank"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/thumb_Civic%20Blue%201.jpg" alt="Imagine aleatoare"></a></td>
+<td align="center" class="row1"><!-- SiteSearch Google -->
+<div class="cse-branding-bottom" style="color:#000000">
+  <div class="cse-branding-form">
+    <form action="http://www.google.ro/cse" id="cse-search-box">
+      <div>
+        <input type="hidden" name="cx" value="partner-pub-5623495814070383:79x2s2-6lxi">
+        <input type="hidden" name="ie" value="ISO-8859-2">
+        <input type="text" name="q" size="31">
+        <input type="submit" name="sa" value="Search">
+      </div>
+    </form>
+  </div>
+  <div class="cse-branding-logo">
+    <img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/poweredby_FFFFFF.gif" alt="Google">
+  </div>
+  <div class="cse-branding-text">
+    căutare personalizată
+  </div>
+</div>
+<!-- SiteSearch Google --></td>
+<td align="center" class="row1"><a href="http://www.daciaclub.ro/galerie/displayimage.php?pos=-42315" target="_blank"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/thumb_blueline.JPG" alt="Ultima imagine adaugata"></a></td>
+</tr>
+<tr><td class="catend" colspan="3"><!-- no content --></td></tr>
+</tbody></table>
+</div>
+<!-- Last upload , Google search, Random picture -->
+<br>
+<br>
+<div class="borderwrap">
+  <div class="formsubtitle" style="padding: 4px;">1 User(s) are reading this topic (1 Guests and 0 Anonymous Users)</div>
+  <div class="row1" style="padding: 4px;">0 Members: </div>
+</div>
+
+<div id="topic_open" style="display: none; z-index: 2;">
+	<br>
+	<div class="borderwrap">
+		<div class="maintitle"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/nav_m.gif" border="0" alt="&gt;" width="8" height="8">&nbsp;<a href="javascript:ShowHide(&#39;topic_open&#39;,&#39;topic_closed&#39;)">Close Topic Options</a></div>
+		<div class="tablepad">
+			<b><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Track&amp;f=9&amp;t=46567">Track this topic</a></b><br>
+			<span class="desc">Receive email notification when a reply has been made to this topic and you are not active on the board.</span><br><br>
+			<b><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Track&amp;f=9&amp;type=forum">Subscribe to this forum</a></b><br>
+			<span class="desc">Receive email notification when a new topic is posted in this forum and you are not active on the board.</span><br><br>
+			<b><a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=Print&amp;client=choose&amp;f=9&amp;t=46567">Download / Print this Topic</a></b><br>
+			<span class="desc">Download this topic in different formats or view a printer friendly version.</span>
+		</div>
+	</div>
+</div>
+
+<div class="borderwrap jump-forum">
+  <div class="row2" style="padding: 5px;">
+    
+    <div align="right"><form onsubmit="if(document.jumpmenu.f.value == -1){return false;}" action="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=SF" method="get" name="jumpmenu">
+			             <input type="hidden" name="act" value="SF">
+<input type="hidden" name="s" value="cfa3b3418acdb090bb8d3a74f8bb0de9">
+			             <select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.jumpmenu.submit() }" class="dropdown">
+			             <optgroup label="Site Jump">
+			              <option value="sj_home">Forum Home</option>
+			              <option value="sj_search">Search</option>
+			              <option value="sj_help">Help</option>
+			             </optgroup>
+			             <optgroup label="Forum Jump"><option value="39">Dacia SuperNova</option>
+<option value="2">&nbsp;&nbsp;|-- Probleme tehnice - Dacia SuperNova</option>
+<option value="3">&nbsp;&nbsp;|-- Piese auto - Dacia SuperNova</option>
+<option value="1">&nbsp;&nbsp;|-- Imbunatatiri - Dacia SuperNova</option>
+<option value="145">&nbsp;&nbsp;|-- Diverse - Dacia SuperNova</option>
+<option value="41">Dacia Solenza</option>
+<option value="18">&nbsp;&nbsp;|-- Probleme tehnice - Dacia Solenza</option>
+<option value="19">&nbsp;&nbsp;|-- Piese auto - Dacia Solenza</option>
+<option value="20">&nbsp;&nbsp;|-- Imbunatatiri - Dacia Solenza</option>
+<option value="146">&nbsp;&nbsp;|-- Diverse - Dacia Solenza</option>
+<option value="44">Dacia Logan</option>
+<option value="34">&nbsp;&nbsp;|-- Probleme tehnice - Dacia Logan</option>
+<option value="36">&nbsp;&nbsp;|-- Piese auto - Dacia Logan</option>
+<option value="37">&nbsp;&nbsp;|-- Imbunatatiri - Dacia Logan</option>
+<option value="38">&nbsp;&nbsp;|-- Diverse - Dacia Logan</option>
+<option value="133">Dacia Sandero</option>
+<option value="139">&nbsp;&nbsp;|-- Probleme tehnice - Dacia Sandero</option>
+<option value="140">&nbsp;&nbsp;|-- Piese auto - Dacia Sandero</option>
+<option value="141">&nbsp;&nbsp;|-- Imbunatatiri - Dacia Sandero</option>
+<option value="134">&nbsp;&nbsp;|-- Diverse - Dacia Sandero</option>
+<option value="148">Dacia Duster</option>
+<option value="155">&nbsp;&nbsp;|-- Probleme tehnice - Dacia Duster</option>
+<option value="156">&nbsp;&nbsp;|-- Piese auto - Dacia Duster</option>
+<option value="157">&nbsp;&nbsp;|-- Imbunatatiri - Dacia Duster</option>
+<option value="149">&nbsp;&nbsp;|-- Discutii generale - Dacia Duster</option>
+<option value="169">Dacia Lodgy</option>
+<option value="170">&nbsp;&nbsp;|-- Dacia Lodgy</option>
+<option value="171">Dacia Dokker si Dokker Van</option>
+<option value="172">&nbsp;&nbsp;|-- Dacia Dokker</option>
+<option value="173">&nbsp;&nbsp;|-- Dacia Dokker Van</option>
+<option value="43">Celelalte modele Dacia - 1100, Berlina, Papuc, Nova</option>
+<option value="23">&nbsp;&nbsp;|-- Probleme tehnice - Dacia Clasic</option>
+<option value="26">&nbsp;&nbsp;|-- Piese auto - Dacia Clasic</option>
+<option value="27">&nbsp;&nbsp;|-- Imbunatatiri - Dacia Clasic</option>
+<option value="124">&nbsp;&nbsp;|-- Dacia Nova</option>
+<option value="168">Oldtimers</option>
+<option value="164">&nbsp;&nbsp;|-- Oldtimers</option>
+<option value="167">&nbsp;&nbsp;|---- Restaurari</option>
+<option value="42">Dacia - Diverse</option>
+<option value="29">&nbsp;&nbsp;|-- Diverse</option>
+<option value="8">&nbsp;&nbsp;|-- Tutoriale, Tips &amp; Tricks</option>
+<option value="127">&nbsp;&nbsp;|-- Service autorizat Dacia</option>
+<option value="110">English Corner</option>
+<option value="46">&nbsp;&nbsp;|-- Dacia Logan English Corner</option>
+<option value="135">&nbsp;&nbsp;|-- Dacia Sandero English Corner</option>
+<option value="152">&nbsp;&nbsp;|-- Dacia Duster English Corner</option>
+<option value="111">&nbsp;&nbsp;|-- Other Dacia Models</option>
+<option value="112">&nbsp;&nbsp;|-- General Discussion</option>
+<option value="40">Alte discutii</option>
+<option value="31">&nbsp;&nbsp;|-- Stiri</option>
+<option value="89">&nbsp;&nbsp;|---- Stiri (Non-Auto)</option>
+<option value="9" selected="selected">&nbsp;&nbsp;|-- Cafenea</option>
+<option value="126">&nbsp;&nbsp;|-- Jurnal de Bord</option>
+<option value="102">&nbsp;&nbsp;|-- Clipuri video</option>
+<option value="104">&nbsp;&nbsp;|---- Clipuri Diverse</option>
+<option value="103">&nbsp;&nbsp;|-- In Car Entertainment</option>
+<option value="107">&nbsp;&nbsp;|---- Car Security - Alarme Auto</option>
+<option value="116">&nbsp;&nbsp;|---- PDA / GPS</option>
+<option value="117">&nbsp;&nbsp;|---- GSM Zone</option>
+<option value="125">&nbsp;&nbsp;|---- Detectoare Radar</option>
+<option value="150">&nbsp;&nbsp;|---- Statii radio</option>
+<option value="106">&nbsp;&nbsp;|-- Legislatie</option>
+<option value="88">&nbsp;&nbsp;|-- Asigurari si Daune Auto</option>
+<option value="30">&nbsp;&nbsp;|-- Calatorii si Intalniri</option>
+<option value="47">&nbsp;&nbsp;|---- Travels</option>
+<option value="22">&nbsp;&nbsp;|---- Intalniri</option>
+<option value="80">&nbsp;&nbsp;|---- Starea Drumurilor</option>
+<option value="153">&nbsp;&nbsp;|---- Coltul biciclistului</option>
+<option value="91">&nbsp;&nbsp;|-- Motor Sport</option>
+<option value="92">&nbsp;&nbsp;|---- Formula 1</option>
+<option value="93">&nbsp;&nbsp;|---- WRC</option>
+<option value="94">&nbsp;&nbsp;|---- DTM</option>
+<option value="95">&nbsp;&nbsp;|---- WTCC</option>
+<option value="96">&nbsp;&nbsp;|---- Monomarca</option>
+<option value="28">&nbsp;&nbsp;|-- Statistici</option>
+<option value="115">&nbsp;&nbsp;|-- Zona Financiara</option>
+<option value="35">&nbsp;&nbsp;|-- Probleme forum</option>
+<option value="7">&nbsp;&nbsp;|---- Probleme administrative</option>
+<option value="109">&nbsp;&nbsp;|-- Anunturi - Oferte Permanente</option>
+<option value="5">&nbsp;&nbsp;|-- Bursa</option>
+<option value="49">&nbsp;&nbsp;|---- Bursa non-auto</option>
+<option value="159">&nbsp;&nbsp;|------ Arhiva cu anunturi non-auto</option>
+<option value="158">&nbsp;&nbsp;|---- Arhiva cu anunturi</option>
+</optgroup>
+</select>&nbsp;<input type="submit" value="Go" class="button"></form></div>
+  </div>
+</div>
+<br>
+<div class="navstrip"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/nav.gif" border="0" alt="&gt;">&nbsp;<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;act=idx">DaciaClub - Forum Dacia</a>&nbsp;&gt;&nbsp;<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showforum=40">Alte discutii</a>&nbsp;&gt;&nbsp;<a href="http://www.daciaclub.ro/index.php?s=cfa3b3418acdb090bb8d3a74f8bb0de9&amp;showforum=9">Cafenea</a></div>
+<table cellspacing="0" id="gfooter">
+  <tbody><tr>
+    <td width="45%"> </td>
+    <td width="10%" align="center" nowrap="nowrap">
+<a href="http://www.daciaclub.ro/lofiversion/index.php/t46567.html"><b>Lo-Fi Version</b></a>&nbsp;
+<a href="http://www.daciaclub.ro/harta_site"><b>Harta site</b></a>&nbsp;
+<a href="http://www.daciaclub.ro/index.php?act=links"><b>Parteneri</b></a>&nbsp;
+<a href="http://www.kaboom.ro/"><b>Jocuri online</b></a>&nbsp;
+<a href="http://www.valutar360.ro/"><b>Curs Valutar</b></a>&nbsp;
+<a href="http://www.hrh.ro/"><b>HRH</b></a>
+<a href="https://www.sanmerino.ro/"><b>Haine din lana merinos</b></a>
+</td>
+    <td width="45%" align="right" nowrap="nowrap">Time is now: 24th March 2020 - 12:52</td>
+  </tr>
+</tbody></table>
+
+<!-- Copyright Information -->
+        				  <div align="center" class="copyright">
+        				  	<a href="http://www.invisionboard.com/" style="text-decoration:none" target="_blank">Invision Power Board</a>
+        				  	&#169; 2020 &nbsp;IPS, Inc.
+        				  <br>Licensed to: DaciaClub - Reno.ro</div></div>
+        				   <!-- / Copyright -->
+<center>
+<table width="98%"><tbody><tr>
+<td width="50%" align="right">
+<a href="http://www.reno.ro/" target="_blank"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/reno.gif" alt="Forum Renault" width="148" height="31"></a>
+</td>
+<td width="50%" align="left">
+<a href="http://www.server-hosting.ro/" target="_blank"><img src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/etp.gif" alt="Server hosting" width="101" height="31"></a>
+</td>
+</tr></tbody></table>
+</center>
+<a href="http://www.daciaclub.ro/contactd.php" style="display:none"><!-- impossible-province --></a>
+<!-- Begin Cookie Consent plugin by Silktide - //silktide.com/cookieconsent -->
+<iframe id="google_osd_static_frame_2804262197143" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/saved_resource(5).html"></iframe><script type="text/javascript">
+    window.cookieconsent_options = {"message":"Acest site folose&#537;te cookie-uri pentru a oferi servicii, pentru a personaliza anun&#539;uri &#537;i pentru a analiza traficul. Dacă folosi&#539;i acest site, sunte&#539;i de acord cu utilizarea cookie-urilor.","dismiss":"AM ÎNŢELES","learnMore":"More info","link":null,"theme":"dark-bottom"};
+</script>
+<script type="text/javascript" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/cookieconsent.min.js.download"></script>
+<!-- End Cookie Consent plugin -->
+ 
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/saved_resource(6).html"></iframe></ins></ins></ins><div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;"><a class="highslide-loading" title="Click to cancel" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;">Loading...</a><div style="display: none;"></div><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="drop-shadow highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.daciaclub.ro/jscripts/highslide/graphics/outlines/drop-shadow.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table></div></body><iframe id="google_esf" name="google_esf" src="./clase de matrice in C, adunarea si inmultirea matricelor - DaciaClub - Forum Dacia_files/zrt_lookup.html" data-ad-client="ca-pub-5623495814070383" style="display: none;"></iframe></html>

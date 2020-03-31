@@ -1,0 +1,138 @@
+var Profitshare = {
+    setup: function(width, height, pn, zone, url, async, isBlock, isTpBlock) {
+        this.width  = width;
+        this.height = height;
+        this.pn     = pn;
+        this.zone   = zone;
+        this.url    = url + '?';
+        this.async  = async;
+        this.timer  = Array();
+        this.isBlock = isBlock;
+        this.isTpBlock = isTpBlock;
+        
+        this.processParams();
+    },
+    processParams: function() {
+        params = {
+            u_h : screen.height,
+            u_w : screen.width,
+            pn  : this.pn,
+            ref : encodeURIComponent(document.referrer),
+            url : encodeURIComponent(window.location),
+            a : this.isBlock,
+            t : this.isTpBlock
+        };
+
+        for (var x in params){
+            this.url += x + '=' + params[x] + '&';
+        }
+    },
+    getIframe: function() {
+        iframe = document.createElement('iframe');
+        iframe.setAttribute('src', this.url);
+        iframe.name                     = 'ps_frame';
+        iframe.marginWidth              = '0';
+        iframe.marginHeight             = '0';
+        iframe.vspace                   = '0';
+        iframe.hspace                   = '0';
+        iframe.allowTransparency        = 'true';
+        iframe.frameBorder              = '0';
+        iframe.width                    = this.width;
+        iframe.height                   = this.height;
+        iframe.scrolling                = 'no';
+        iframe.style.backgroundColor    = '#FFFFFF';
+        
+        return iframe;
+    },
+    posY: function(elm) {
+        var test = elm, top = 0;
+
+        while(!!test && test.tagName.toLowerCase() !== "body") {
+            top += test.offsetTop;
+            test = test.offsetParent;
+        }
+
+        return top;
+    },
+    viewPortHeight: function() {
+        var de = document.documentElement;
+
+        if(!!window.innerWidth)
+        { return window.innerHeight; }
+        else if( de && !isNaN(de.clientHeight) )
+        { return de.clientHeight; }
+
+        return 0;
+    },
+    scrollY: function() {
+        if( window.pageYOffset ) { return window.pageYOffset; }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+    },
+    checkvisible: function( elm ) {
+        var vpH = this.viewPortHeight(), // Viewport Height
+            st  = this.scrollY(), // Scroll Top
+            y   = this.posY(elm);
+
+        return !(y > (vpH + st));
+    },
+    setupTimer: function(zone, i) {
+        var ps_t    = this;
+        var ps_z    = zone;
+        var ps_i;
+        
+        if("undefined"==typeof i) {
+            ps_i = 0;
+        }else{
+            ps_i = i;
+        }
+        
+        this.timer[ps_i] = setInterval(function(){ps_t.checkIsSeen(ps_z, ps_i)}, 50);
+    },
+    checkIsSeen: function(zone, i) {
+        if(this.checkvisible(zone)){
+            zone.appendChild(this.getIframe());
+            clearInterval(this.timer[i]);
+        }
+    },
+    normal: function() {
+        uID             = 'profitshare-static-' + Math.random().toString(36).substr(2, 9);
+        div             = document.createElement('div');
+        div.id          = uID;
+        div.setAttribute('style', 'width: ' + this.width + "px;height: " + this.height + "px;border: 0;padding: 0;margin: 0;display: inline;");
+        document.write(div.outerHTML);
+        
+        getStatic = document.getElementById(uID);
+        if(getStatic != null) {
+            this.setupTimer(getStatic);
+        }
+    },
+    asynchron: function() {
+        for(var i=1;i<10;i++){
+            getZone = document.getElementById('profitshare-' + this.zone + '-' + i);
+            if(getZone != null) {
+                this.setupTimer(getZone, i);
+            }else{
+                break;
+            }
+        }
+    },
+    start: function() {
+        if(this.async){
+            this.asynchron();
+        }else{
+            this.normal();
+        }
+    }
+}
+
+Profitshare.setup(
+    "728",
+    "90",
+    "",
+    "318920",
+    "//app.profitshare.ro/i/SXub/",
+    false,
+    0,
+    0
+);
+Profitshare.start();

@@ -18,7 +18,7 @@ int main() {
 	cin >> a;
 
 	if (este_par(a) == 1)
-		cout << "numarul este par";
+		cout << "Numarul este par";
 	else
-		cout << "Numarul nu este par";
+		cout << "Numarul este impar";
 }

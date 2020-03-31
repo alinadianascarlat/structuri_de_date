@@ -1,0 +1,146 @@
+function chat()
+{
+window.open('http://www.daciaclub.ro/chat/index.html','Chat','width=720,height=425');
+}
+
+var menu1=new Array()
+menu1[0]='<table><tr><td><a href="./galerie/galerie-foto.html"><span style="color:#385d86"><b>Galerie Foto</b></span></a></td></tr>'
+menu1[1]='<tr><td><a href="galerie-video-f102.html"><span style="color:#385d86"><b>Galerie Video</b></span></a></td></tr>'
+menu1[2]='<tr><td><a href="#" onclick="chat();"><span style="color:#385d86"><b>Chat</b></span></a></td></tr>'
+menu1[3]='<tr><td><a href="http://www.daciaclub.ro/wiki"><span style="color:#385d86"><b>Wiki</b></span></a></td></tr>'
+menu1[4]='<tr><td><a href="emagazin.html"><span style="color:#385d86"><b>eMagazin</b></span></a></td></tr>'
+menu1[5]='<tr><td><a href="index.php?act=members"><span style="color:#385d86"><b>Members</b></span></a></td></tr>'
+menu1[6]='<tr><td><a href="index.php?act=Calendar"><span style="color:#385d86"><b>Calendar</b></span></a></td></tr>'
+menu1[7]='<tr><td><a href="index.php?act=help"><span style="color:#385d86"><b>Help</b></span></a></td></tr>'
+menu1[8]='<tr><td><a href="./lofiversion/index.php"><span style="color:#385d86"><b>Lo-Fi Version</b></span></a></td></tr></table>'
+
+var menu2=new Array()
+menu2[0]='<table><tr><td><a href="index.php?act=calcrev"><span style="color:#385d86"><b>Calculator revizie</b></span></a></td></tr>'
+menu2[1]='<tr><td><a href="index.php?act=calcimp"><span style="color:#385d86"><b>Calculator impozit auto</b></span></a></td></tr>'
+menu2[2]='<tr><td><a href="index.php?act=weather"><span style="color:#385d86"><b>Vremea</b></span></a></td></tr>'
+menu2[3]='<tr><td><a href="http://www.reno.ro"><span style="color:#385d86"><b>Forum Renault</b></span></a></td></tr>'
+menu2[4]='<tr><td><a href="index.php?act=links"><span style="color:#385d86"><b>Parteneri</b></span></a></td></tr>'
+//menu2[5]='<tr><td><a href="index.php?act=download"><span style="color:#385d86"><b>Download</b></span></a></td></tr></table>'
+
+var menuwidth='100px' //default menu width
+var menubgcolor='#EBEBEB'  //menu bgcolor
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+/////No further editting needed
+
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onmouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top=-500
+if (menuwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=menuwidth
+}
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible
+else if (e.type=="click")
+obj.visibility=hidden
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+}
+else{
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("")
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+if (window.event) event.cancelBubble=true
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu()
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+populatemenu(menucontents)
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu()
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden"
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay)
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide)
+}
+
+if (hidemenu_onclick=="yes")
+{
+document.onclick=hidemenu
+}
