@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{B1ECFCE3-A811-456C-88C9-920F0AEB8440}</ProjectGuid>
+    <ProjectGuid>{FF6E377F-CB26-491D-807F-1171AB7EC991}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SortareShellSort</RootNamespace>
+    <RootNamespace>Permutariimpare</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,7 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SortareShellSort.cpp" />
+    <ClCompile Include="Permutariimpare.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,7 @@
-﻿// 5.Se citeste un numar natural n. Afisati permutarile multimii 1,2,3,..n in care pana 
-// la jumatate elementele sunt in ordine descrescatoare,
-// iar cealalta jumatate pana la final sunt in ordine crescatoare.
+// 6.Se citeste un numar natural n. Afisati permutarile multimii 1,2,3,..n in care pana 
+// la jumatate elementele sunt in ordine crescatoare,
+// iar cealalta jumatate pana la final sunt in ordine descrescatoare.
+
 
 #include<iostream>
 using namespace std;
@@ -18,12 +19,12 @@ int valid(int k)
 {
     if (k > 1)
         if (k <= (n + 1) / 2)
-        { 
-            if (sol[k] > sol[k - 1])
-            return 0; 
-        }
-        else 
+        {
             if (sol[k] < sol[k - 1])
+                return 0;
+        }
+        else
+            if (sol[k] > sol[k - 1])
                 return 0;
     return 1;
 }

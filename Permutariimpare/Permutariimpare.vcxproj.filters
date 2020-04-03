@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SortareShellSort.cpp">
+    <ClCompile Include="Permutariimpare.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

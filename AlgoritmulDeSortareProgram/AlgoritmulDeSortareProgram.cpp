@@ -12,7 +12,7 @@ int main() {
 	for (int i = 0; i < totalNr; i++) {
 		cout << x[i] << " ";
 	}
-	cout << "Array is:" << endl;
+	cout << endl;
 	do {
 		swap = false;
 		for (int i = 1; i < totalNr; i++) {
