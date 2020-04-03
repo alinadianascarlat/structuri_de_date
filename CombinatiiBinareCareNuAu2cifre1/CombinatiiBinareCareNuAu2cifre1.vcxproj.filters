@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Permutariimpare.cpp">
+    <ClCompile Include="CombinatiiBinareCareNuAu2cifre1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

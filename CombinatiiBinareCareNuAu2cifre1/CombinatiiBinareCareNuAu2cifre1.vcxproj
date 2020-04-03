@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{FF6E377F-CB26-491D-807F-1171AB7EC991}</ProjectGuid>
+    <ProjectGuid>{65FE5667-B145-40FE-AEA7-6737A5049EB2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Permutariimpare</RootNamespace>
+    <RootNamespace>CombinatiiBinareCareNuAu2cifre1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,7 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Permutariimpare.cpp" />
+    <ClCompile Include="CombinatiiBinareCareNuAu2cifre1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
