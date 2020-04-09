@@ -11,7 +11,7 @@ void afiseaza() {
 		if (i % 2 != 0)
 			cout << i << " ";
 		else
-			cout << sol[i] << " ";
+			cout << sol[ i] << " ";
 	cout << endl;
 }
 
