@@ -12,6 +12,7 @@ Nod* cap = NULL;
 void afisareLista(Nod* cap) {
 	while (cap != NULL) {
 		cout << cap->value << endl;
+		cap = cap->next;
 	}
 }
 
