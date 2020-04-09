@@ -1,6 +1,4 @@
-﻿// 31. Scrieți un program în C care să afișeze o listă simplu înlănțuită în ordine
-//inversă
-
+﻿
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
@@ -65,9 +63,27 @@ int main() {
 	inserareInceput(cap, 42);
 	inserareFinal(cap, 14);
 	afisareLista(cap);
+
+	Nod* predecesor = cap;
+	for (Nod* p = cap; p->next != NULL; predecesor = p, p = p->next) {
+		for (Nod* k = p->next; k != NULL; k = k->next) {
+			if (p->value > k->value) {
+				Nod* aux = k->next;
+				k->next = p;
+				p->next = aux;
+
+				if (cap == predecesor) {
+					cap = k;
+				}
+				else {
+					predecesor->next = k;
+				}
+			}
+		}
+	}
+
 	//stergereElementPozitie(cap, 1);
 	afisareLista(cap);
 	return 0;
 
 }
-
