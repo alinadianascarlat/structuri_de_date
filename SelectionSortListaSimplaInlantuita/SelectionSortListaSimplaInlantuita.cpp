@@ -57,31 +57,26 @@ void stergereElementPozitie(Nod*& cap, int pozitie) {
 	stergereElement(predecesor);
 }
 
+void ordonareLista(Nod*k){}
 
 int main() {
 	inserareInceput(cap, 16);
 	inserareInceput(cap, 42);
 	inserareFinal(cap, 14);
+	cout << "Lista inainte de ordonare:" << endl;
 	afisareLista(cap);
 
 	Nod* predecesor = cap;
 	for (Nod* p = cap; p->next != NULL; predecesor = p, p = p->next) {
 		for (Nod* k = p->next; k != NULL; k = k->next) {
 			if (p->value > k->value) {
-				Nod* aux = k->next;
-				k->next = p;
-				p->next = aux;
-
-				if (cap == predecesor) {
-					cap = k;
-				}
-				else {
-					predecesor->next = k;
-				}
+				int aux = p->value;
+				p->value = k->value;
+				k->value = aux;
 			}
 		}
 	}
-
+	cout << "Lista dupa ordonare:" << endl;
 	//stergereElementPozitie(cap, 1);
 	afisareLista(cap);
 	return 0;

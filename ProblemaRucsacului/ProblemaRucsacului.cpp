@@ -14,12 +14,20 @@ int main()
 	cin >> GMax;
 
 	cout << "Castigul pt.fiecare obiect ="<<endl;
-	cout << " Greutatea pt. fiecare obiect =";
 
 	for (i = 0; i < n; i++)
 	{
-		o[i] = i; cin >> c[i] >> g[i];
+		o[i] = i; 
+		cin >> c[i];
 	}
+
+	cout << " Greutatea pt. fiecare obiect =";
+	for (i = 0; i < n; i++)
+	{
+		o[i] = i;
+		cin >> g[i];
+	}
+
 	//ordonez obiectele descrescator dupa castigul unitar
 	do
 	{
@@ -32,7 +40,7 @@ int main()
 				o[i + 1] = aux;
 				schimb = 1;
 			}
-	} while (schimb);
+	} whiltroroe (schimb);
 	for (i = 0, Gr = GMax; i<n && Gr>g[o[i]]; i++)
 	{
 		x[o[i]] = 1;

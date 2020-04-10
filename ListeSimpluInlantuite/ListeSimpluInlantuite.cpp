@@ -65,6 +65,30 @@ int main() {
 	inserareInceput(cap, 42);
 	inserareFinal(cap, 14);
 	afisareLista(cap);
+
+	Nod* prePredecesor = NULL;
+	Nod* predecesor = cap;
+	for (Nod* p = cap->next; p->next != NULL; prePredecesor = predecesor, predecesor = p, p = p->next) {
+		Nod* k = p;
+		while (predecesor != null && predecesor->value > k->value)
+		{
+			Nod* aux = k->next;
+			k->next = predecesor;
+			predecesor->next = aux;
+			if (prePredecesor != NULL)
+				prePredecesor->next = k;
+
+		}
+		j = i;
+
+		while (j > 0 && v[j - 1] > v[j]) {
+			aux = v[j];
+			v[j] = v[j - 1];
+			v[j - 1] = aux;
+			j--;
+		}
+	}
+
 	//stergereElementPozitie(cap, 1);
 	afisareLista(cap);
 	return 0;
