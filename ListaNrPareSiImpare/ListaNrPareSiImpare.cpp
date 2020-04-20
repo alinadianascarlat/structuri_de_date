@@ -1,3 +1,7 @@
+
+//15.Creati doua liste:una ce contine numere pare si alta ce contine numere impare.Numerele se vor citi de
+//la tastatura pana se introduce -1.
+
 #include <iostream>
 using namespace std;
 

@@ -1,18 +1,24 @@
-//10. Folosind metoda divide et impera, scrie?i o func?ie care s? determine dac? un
-//tablou cu elemente �ntregi este ordonat cresc?tor.
+﻿//10. Folosind metoda divide et impera, scrieți o funcție care să determine dacă un
+//tablou cu elemente întregi este ordonat crescător.
+
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
 
 int main()
 {
     int v[100];
     int i, n, crescator;
-    cout << "Dati dimensiunea vectorului "; 
+    cout << "n = "; 
     cin >> n;
     for (i = 0; i < n; i++)
     {
         cout << "Dati valoarea " << i + 1 << " ";
         cin >> v[i];
     }
-    //presupunem ca vectorul este ordonat crescator !
+    
     crescator = 1;
     i = 0;
     while ((i < n - 1) && (crescator != 0))
