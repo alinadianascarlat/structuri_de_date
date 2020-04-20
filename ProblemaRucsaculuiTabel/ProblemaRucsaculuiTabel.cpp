@@ -3,12 +3,12 @@
 
 using namespace std;
 
-int n = 4;
-int vi[] = { 0, 10, 40, 30, 50 };
-int gi[] = { 0, 5, 4, 6, 3 };
-int m[5][11];
-int alese[5][11];
-int G = 10;
+int n = 6;
+int vi[] = { 0, 11, 6, 10, 3, 11, 10 };
+int gi[] = { 0, 9, 4, 3, 8, 7, 3 };
+int m[7][15];
+int alese[7][15];
+int G = 14;
 
 int algorithm() {
 	for (int g = 0; g <= G; g++)
