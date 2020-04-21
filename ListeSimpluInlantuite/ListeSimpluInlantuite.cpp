@@ -61,6 +61,7 @@ void stergereElementPozitie(Nod*& cap, int pozitie) {
 
 
 int main() {
+	int i, j, aux, v;
 	inserareInceput(cap, 16);
 	inserareInceput(cap, 42);
 	inserareFinal(cap, 14);
