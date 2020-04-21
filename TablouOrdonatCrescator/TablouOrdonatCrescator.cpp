@@ -9,27 +9,20 @@ using namespace std;
 
 int main()
 {
-    int v[100];
-    int i, n, crescator;
-    cout << "n = "; 
-    cin >> n;
-    for (i = 0; i < n; i++)
-    {
-        cout << "Dati valoarea " << i + 1 << " ";
-        cin >> v[i];
-    }
-    
-    crescator = 1;
-    i = 0;
-    while ((i < n - 1) && (crescator != 0))
-    {
-        if (v[i] > v[i + 1])
-            crescator = 0;
-        i++;
-    }
-    if (crescator == 0) 
-        cout << "Vectorul nu este ordonat crescator";
-    else
-        cout << "Vectorul este ordonat crescator !";
-    return 0;
+	int n, v[100];
+	cout << " n = ";
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cout << "v[" << i << "]= ";
+		cin >> v[i];
+	}
+
+	bool  crescator = true;
+	for (int i = 0; i < n - 1; i++) {
+		if (v[i] > v[i + 1]) {
+			crescator = false;
+		}
+	}
+	cout << "Sirul crescator:"<<crescator;
+	
 }

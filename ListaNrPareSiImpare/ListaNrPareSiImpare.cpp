@@ -31,25 +31,8 @@ void push(nod*& p, int x)
     q->val = x;
     q->next = NULL;
 }
-/*
-void pop(nod * & p)
-{
-    if(p->next == NULL)
-        {
-            delete(p);
-            return;
-        }
 
-    nod * q = p, * o;
-    while(q->next->next)
-        {
-            q = q->next;
-        }
-    o = q->next;
-    q->next = NULL;
-    delete(o);
-}
-*/
+    
 void citire_lista(nod*& p)
 {
     int x, n;
