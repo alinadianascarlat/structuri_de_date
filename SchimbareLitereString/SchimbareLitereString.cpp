@@ -20,6 +20,18 @@ char* replace(char* s, char from, char to) {
 	return s1;
 }
 
+char* replaceRec(char* s, char from, char to) {
+	char* s1 = new char[strlen(s) + 1];
+
+	strcpy(s1, s);
+	//s[0] + replaceRec(s[1..length(s)], from, to)
+	for (int i = 0; i < strlen(s1); i++) {
+		if (s1[i] == from)
+			s1[i] = to;
+	}
+	return s1;
+}
+
 int main() {
 	char s[100];
 	cout << replace((char*)"steve", 'e', 'a');	
