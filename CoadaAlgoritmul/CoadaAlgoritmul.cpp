@@ -9,17 +9,20 @@ void push(int coada[], int& k, int numar) {
 	coada[k] = numar;
 }
 
+
 int front(int coada[]) {
 	return coada[1];
 }
 
+
 int pop(int coada[], int& k) {
 	int rezultat = coada[1];
+
 	for (int i = 1; i < k - 1; i++) {
 		coada[i] = coada[i + 1];
+	}
 		k = k - 1;
 		return rezultat;
-	}
 }
 
 int main()
@@ -35,3 +38,6 @@ int main()
 	cout << pop(coada, k) << " ";
 	return 0;
 }
+
+
+
