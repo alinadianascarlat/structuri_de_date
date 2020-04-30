@@ -1,4 +1,5 @@
-﻿
+﻿//37. Implementați SelectionSort pentru liste simplu înlănțuite
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;

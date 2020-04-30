@@ -1,3 +1,6 @@
+﻿//3. Se citește un număr n.Generați și afișați toate combinațiile de câte n cifre binare
+//care nu au două cifre de 1 alăturate.
+
 #include<iostream>
 using namespace std;
 

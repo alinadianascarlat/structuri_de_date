@@ -6,7 +6,7 @@ using namespace std;
 
 int x[15], n;
 
-void afis()
+void afisare()
 {
     for (int i = 1; i <= n; i++)
         cout << x[i] << " ";
@@ -20,7 +20,7 @@ void back01(int k)
         x[k] = i;
         if (k > 1) if (x[k] * x[k - 1] != 1)
             if (k == n)  
-                afis();
+                afisare();
             else back01(k + 1);
         else;
         else back01(k + 1);

@@ -1,3 +1,8 @@
+//2. Având o tabl? de ?ah ?i un cal a?ezat pe o pozi?ie random pe acea tabl?, s? se
+//parcurg? întreaga tabl? de ?ah, astfel încât calul s? treac? cel mult o dat? printr - o
+//c?su??.
+
+
 #include<iostream>
 #include<stdio.h>
 using namespace std;

@@ -1,4 +1,5 @@
 
+
 //4. Se citesc n numere naturale.Determina?i o a?ezare a acestor numere sub forma
 //unui cerc, astfel încât suma produselor de câte dou? numere al?turate s? fie
 //maxim?.
@@ -9,14 +10,14 @@ using namespace std;
 
 int x[20], n, b[20], pmax = 0;
 
-void afis()
+void afisare()
 {
 	for (int i = 1; i <= n; i++)
 		cout << b[i] << " ";
 
 }
 
-void alege()//alege permutarea pentru care se obtine suma maxima 
+void alege()
 {
 	int p = x[1] * x[n];
 	for (int i = 1; i < n; i++)
@@ -24,23 +25,28 @@ void alege()//alege permutarea pentru care se obtine suma maxima
 	if (p > pmax)
 	{
 		pmax = p;
-		for (int i = 1; i <= n; i++) b[i] = x[i];
+		for (int i = 1; i <= n; i++)
+			b[i] = x[i];
 	}
 }
 
-void inter(int& x, int& y)//interschimba doua valori
+void interschimba(int& x, int& y)
 {
-	int aux = x; x = y; y = aux;
+	int aux = x;
+	x = y;
+	y = aux;
 }
 
-void perm(int k, int n)//genereaza permutarile
+void permutare(int k, int n)
 {
 	for (int i = k; i <= n; i++)
 	{
-		inter(x[k], x[i]);
-		if (k == n) alege();
-		else perm(k + 1, n);
-		inter(x[k], x[i]);
+		interschimba(x[k], x[i]);
+		if (k == n)
+			alege();
+		else
+			permutare(k + 1, n);
+		interschimba(x[k], x[i]);
 	}
 }
 
@@ -50,7 +56,7 @@ int main()
 	cin >> n;
 	for (int i = 1; i <= n; i++)
 		cin >> x[i];
-	perm(1, n);
-	afis();
+	permutare(1, n);
+	afisare();
 	return 0;
 }

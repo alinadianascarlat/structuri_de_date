@@ -1,3 +1,9 @@
+//20. Dup? o vacan?? de 3 luni, te întorci acas? ?i g?se?ti o gramad? de scrisori în
+//cutia po?tal?.Având în vedere c? printre scrisori se afl? ?i facturi ce trebuie pl?tite
+//urgent ?i diverse reclame, trebuie s? le sortezi în func?ie de prioritate.Elaboreaz?
+
+//un astfel de algoritm în C sau C++ pentru a transform? stiva de coresponden?? într -
+//o coad? de priorit??i.
 
 #include <iostream>
 #include <conio.h>
